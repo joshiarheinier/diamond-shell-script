@@ -11,7 +11,7 @@ recursive_traverse() {
 	done
 }
 
-recursive_traverse ./* | sed -e "s/[^/]*\// |/g" -e "s/|\([^ ]\)/+---\1/"
+recursive_traverse ./* | sed -e "s/[^/]*\//| /g" -e "s/| \([^|]\)/+---\1/"
 
 for ii in `recursive_traverse ./*`; do
 	COUNT=$(( $COUNT + 1 ))

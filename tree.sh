@@ -10,4 +10,4 @@ recursive_traverse() {
 	done
 }
 
-recursive_traverse ./* | sed -e "s/[^/]*\// |/g" -e "s/|\([^ ]\)/+---\1/"
+recursive_traverse ./* | sed -e "s/[^/]*\//| /g" -e "s/| \([^|]\)/+---\1/"
